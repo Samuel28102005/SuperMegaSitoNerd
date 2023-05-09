@@ -1,4 +1,4 @@
-import { Component } from '@angular/core';
+import { Component, OnInit } from '@angular/core';
 import { Root } from '../app.component';
 import { Observable } from 'rxjs';
 import { HttpClient } from '@angular/common/http';
@@ -8,21 +8,20 @@ import { HttpClient } from '@angular/common/http';
   templateUrl: './young-red-dragon.component.html',
   styleUrls: ['./young-red-dragon.component.css']
 })
-export class YoungRedDragonComponent {
+export class YoungRedDragonComponent implements OnInit {
   title = 'vesuvio esplodi';
   data! : Root;
   pic = String;
   loading!: boolean;
   o !: Observable<Root>;
   constructor(public http: HttpClient) {}
-
-
-   makeRequest(): void {
-     console.log("here");
+  ngOnInit(): void {
+    console.log("here");
      this.loading = true;
      this.o = this.http.get<Root>('https://api.scryfall.com/cards/named?fuzzy=a-young-red-dragon-a-bathe-in-gold');
      this.o.subscribe(this.getData);
    }
+     
    getData = (d : Root) =>
    {
      this.loading = (false);

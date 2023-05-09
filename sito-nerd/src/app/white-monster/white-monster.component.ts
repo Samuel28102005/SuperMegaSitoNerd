@@ -1,4 +1,4 @@
-import { Component } from '@angular/core';
+import { Component, OnInit } from '@angular/core';
 import { Root } from '../app.component';
 import { Observable } from 'rxjs';
 import { HttpClient } from '@angular/common/http';
@@ -8,7 +8,7 @@ import { HttpClient } from '@angular/common/http';
   templateUrl: './white-monster.component.html',
   styleUrls: ['./white-monster.component.css']
 })
-export class WhiteMonsterComponent {
+export class WhiteMonsterComponent implements OnInit{
   title = 'vesuvio esplodi';
   data! : Root;
   pic = String;
@@ -17,7 +17,7 @@ export class WhiteMonsterComponent {
   constructor(public http: HttpClient) {}
 
 
-   makeRequest(): void {
+  ngOnInit(): void {
      console.log("here");
      this.loading = true;
      this.o = this.http.get<Root>('https://api.scryfall.com/cards/named?fuzzy=white-shield-crusader');

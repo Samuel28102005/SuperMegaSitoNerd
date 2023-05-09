@@ -1,4 +1,4 @@
-import { Component } from '@angular/core';
+import { Component, OnInit } from '@angular/core';
 import { Root } from '../app.component';
 import { Observable } from 'rxjs';
 import { HttpClient } from '@angular/common/http';
@@ -8,7 +8,7 @@ import { HttpClient } from '@angular/common/http';
   templateUrl: './black-dragon.component.html',
   styleUrls: ['./black-dragon.component.css']
 })
-export class BlackDragonComponent {
+export class BlackDragonComponent implements OnInit{
   title = 'vesuvio esplodi';
   data! : Root;
   pic = String;
@@ -17,7 +17,7 @@ export class BlackDragonComponent {
   constructor(public http: HttpClient) {}
 
 
-   makeRequest(): void {
+   ngOnInit(): void {
      console.log("here");
      this.loading = true;
      this.o = this.http.get<Root>('https://api.scryfall.com/cards/named?fuzzy=aust+com');
