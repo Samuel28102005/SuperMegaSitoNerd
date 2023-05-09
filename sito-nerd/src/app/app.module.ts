@@ -6,12 +6,16 @@ import { AppComponent } from './app.component';
 import { BlackDragonComponent } from './black-dragon/black-dragon.component';
 import { YoungRedDragonComponent } from './young-red-dragon/young-red-dragon.component';
 import { HttpClientModule } from '@angular/common/http';
+import { WhiteMonsterComponent } from './white-monster/white-monster.component';
+import { GreenSlimeComponent } from './green-slime/green-slime.component';
 
 @NgModule({
   declarations: [
     AppComponent,
     BlackDragonComponent,
-    YoungRedDragonComponent
+    YoungRedDragonComponent,
+    WhiteMonsterComponent,
+    GreenSlimeComponent
   ],
   imports: [
     BrowserModule,
