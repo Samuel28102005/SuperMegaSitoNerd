@@ -9,6 +9,7 @@ import { HttpClientModule } from '@angular/common/http';
 import { WhiteMonsterComponent } from './white-monster/white-monster.component';
 import { GreenSlimeComponent } from './green-slime/green-slime.component';
 import { PurpleCrabComponent } from './purple-crab/purple-crab.component';
+import { GenericComponent } from './generic/generic.component';
 
 @NgModule({
   declarations: [
@@ -17,7 +18,8 @@ import { PurpleCrabComponent } from './purple-crab/purple-crab.component';
     YoungRedDragonComponent,
     WhiteMonsterComponent,
     GreenSlimeComponent,
-    PurpleCrabComponent
+    PurpleCrabComponent,
+    GenericComponent
   ],
   imports: [
     BrowserModule,
