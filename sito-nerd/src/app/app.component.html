@@ -1,14 +1,23 @@
-<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
-
-<div class="container">
-    <div class="navbar navbar-expand-lg navbar-light bg-light">
-      <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+<nav class="navbar navbar-expand-sm navbar-dark bg-dark">
+  <div class="container-fluid">
+    <a class="navbar-brand" href="javascript:void(0)">Logo</a>
+    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#mynavbar">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="collapse navbar-collapse" id="mynavbar">
+      <ul class="navbar-nav me-auto">
         <li class="nav-item nav-link" routerLink="carta/young-red-dragon" routerLinkActive="active-menu">Devil Dragon</li>
         <li class="nav-item nav-link" routerLink="carta/white-shield-crusader" routerLinkActive="active-menu">White Monster</li>
         <li class="nav-item nav-link" routerLink="carta/purple-crab" routerLinkActive="active-menu">Purple Crab</li>
         <li class="nav-item nav-link" routerLink="carta/green-slime" routerLinkActive="active-menu">Green Slime</li>
         <li class="nav-item nav-link" routerLink="carta/black-dragon" routerLinkActive="active-menu">Black Dragon</li>
       </ul>
+      <form class="d-flex">
+        <input class="form-control me-2" type="text" placeholder="Search">
+        <button class="btn btn-primary" type="button">Search</button>
+      </form>
     </div>
-    <router-outlet></router-outlet>
-</div>
+  </div>
+</nav>
+<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+<router-outlet></router-outlet>
